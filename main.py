@@ -1,37 +1,23 @@
-# checking account = conta corrent e savings account = conta poupança
+# checking account = conta corrente e savings account = conta poupança
 import random
-import sys
 from account import Account
 
 def main():
     print("Welcome to your personal bank!!")
 
     while True:
-        u_input = input("Do you already have an account at our bank?[yes/no]: ")
+        u_input = input("Would you like to login to your account?[yes/no]: ")
         u_input = u_input.lower()
 
         if u_input == "yes":
-            login(# account_obj)
+            account = login()
+            pybank(account)
         elif u_input == "no":
-            while True:
-                create = input("Do you wish to create an account?[yes/no]: ")
-                create = create.lower()
-
-                if create == "yes":
-                    account = create_account()
-                    login(account)
-                elif create == "no":
-                    print("Logging you out...")
-                    sys.exit()
-                else:
-                    print("I'm sorry... I could not understand you. Please try again.")
+            break
         else:
             print("I'm sorry... I could not understand you. Please try again.")
 
-def login(obj_account):
-    pass
-
-def create_account():
+def login():
     owner = input("Your name: ")
     number = random.randint(100, 999)
     credit = input("The amount of money you wish to deposit on your account[type 0 for none]: ")
@@ -43,6 +29,9 @@ def create_account():
     print("Logging you in...")
 
     return account
+
+def pybank(obj):
+    pass
 
 # Se eu estou executando o interpretador a partir desse arquivo, então execute a função main
 if __name__ == "__main__":

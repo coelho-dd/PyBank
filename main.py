@@ -1,9 +1,9 @@
 # checking account = conta corrent e savings account = conta poupança
-
 from account import Account
 
-my_account = Account("davi", 123, 1000, "checking")
-my_account.withdraw(200)
-my_account.bank_statement()
-my_account.deposit(200)
-my_account.bank_statement()
+def main():
+    pass
+
+# Se eu estou executando o interpretador a partir desse arquivo, então execute a função main
+if __name__ == "__main__":
+    main()
